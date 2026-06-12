@@ -386,6 +386,36 @@ blockquote{
 .test-attr{display:flex;flex-direction:column;align-items:center;gap:5px}
 .test-name{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--paper)}
 .test-co{font-family:'JetBrains Mono',monospace;font-size:11px;color:#5A5D66;letter-spacing:.06em}
+/* ════════ HEALTH-TECH ════════ */
+.ht{padding:var(--sec) var(--pad) 0;max-width:var(--max);margin:0 auto}
+.ht-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:clamp(36px,5vw,64px)}
+@media(max-width:680px){.ht-grid{grid-template-columns:1fr}}
+.ht-card{
+  background:#fafafa;border:1px solid #e0e0e0;border-radius:12px;
+  padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:16px;
+  transition:border-color .2s,transform .2s;
+}
+.ht-card:hover{border-color:#b0b0b0;transform:translateY(-2px)}
+.ht-tags{display:flex;gap:8px;flex-wrap:wrap}
+.ht-tag{
+  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;
+  background:#e8f0fe;color:#1967d2;
+  padding:4px 10px;border-radius:100px;
+}
+.ht-title{font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:850;font-size:clamp(20px,2.4vw,28px);letter-spacing:-0.025em;line-height:1.1}
+.ht-sub{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--graphite);letter-spacing:.05em;margin-top:-8px}
+.ht-desc{font-size:15px;color:var(--graphite);line-height:1.65;flex:1}
+.ht-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:4px}
+.ht-link{
+  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:3px;
+  transition:color .15s,border-color .15s;
+}
+.ht-link:hover{color:var(--klein);border-color:var(--klein)}
+.ht-note{font-size:14px;color:var(--graphite);line-height:1.65;margin-top:clamp(28px,4vw,48px);max-width:640px}
+
 /* ════════ CTA ════════ */
 .cta{
   margin-top:var(--sec);
@@ -851,6 +881,43 @@ footer{
     </div>
   </div>
 </section>
+
+<!-- ════════ HEALTH-TECH ════════ -->
+<div class="sec ht rv">
+  <div class="sec-head">
+    <div>
+      <div class="kicker">Health-Tech & Claude Projects</div>
+      <h2 class="sec-title">Built With AI.<br>Solving Real Problems.</h2>
+    </div>
+  </div>
+  <div class="ht-grid">
+    <div class="ht-card">
+      <div class="ht-tags">
+        <span class="ht-tag">Claude Code</span>
+        <span class="ht-tag">Next.js</span>
+      </div>
+      <h3 class="ht-title">Client Workout &amp; Tracking App</h3>
+      <p class="ht-desc">Customizable rehab program delivery, progress tracking, real-time coaching optimization.</p>
+      <div class="ht-actions">
+        <a class="ht-link" href="#">Live Demo →</a>
+        <a class="ht-link" href="#">GitHub →</a>
+      </div>
+    </div>
+    <div class="ht-card">
+      <div class="ht-tags">
+        <span class="ht-tag">Claude</span>
+        <span class="ht-tag">v0</span>
+      </div>
+      <h3 class="ht-title">Medina Fight Lab</h3>
+      <p class="ht-sub">medinafightlab.com — Designer &amp; Builder</p>
+      <p class="ht-desc">Health-tech brand &amp; content platform. Instagram carousels, client education tools, bilingual workout programs. Uses Claude + v0 to intelligently customize programs based on client needs.</p>
+      <div class="ht-actions">
+        <a class="ht-link" href="https://medinafightlab.com" target="_blank" rel="noopener">Visit Site →</a>
+      </div>
+    </div>
+  </div>
+  <p class="ht-note">When I'm not building for clients, I'm using Claude and custom tools to solve real problems in rehabilitation and athletic performance.</p>
+</div>
 
 <!-- ════════ CTA ════════ -->
 <section class="cta" id="contact">
